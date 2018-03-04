@@ -42,7 +42,7 @@
 	var address = document.getElementById('accounts').value;
 	var toAddress = document.getElementById('toaddr').value;
 	var amount = web3.toWei(document.getElementById('amount').value,"ether");
-	//web3.eth.defaultAccount = address;
+	web3.eth.defaultAccount = address;
 	if(web3.personal.unlockAccount(address,document.getElementById('pass').value)){
 		web3.eth.sendTransaction({from: address, to:toAddress, value:amount},function(err,result){
 			if(!err)
