@@ -1,4 +1,4 @@
-# Mini Wallet Project
+# Goal
 
 스마트 컨트랙트를 사용하는 dApp을 개발하기 전에
 
@@ -10,6 +10,7 @@
 
 html페이지에서 작동되게 만들어 보는게 목적이다.
 
+---
 
 # Pre Work
 
@@ -19,9 +20,23 @@ html페이지에서 작동되게 만들어 보는게 목적이다.
 
 (필자는 geth를 사용한다.) 
 
-실행시킨 후 wallet.html 파일 Line 11의 경로 값을 
+실행시킨 후 [wallet.html](https://github.com/Solidity-Project/Mini-Wallet/blob/master/wallet.html)의 Line 11의 경로 값을 
 
 수정해준 후 실행시키면 된다.
+
+---
+
+# Key Point
+
+[wallet.html](https://github.com/Solidity-Project/Mini-Wallet/blob/master/wallet.html)의 Line 28
+
+지속적인 변화가 필요하다면 
+
+web3.eth.filter('latest').watch(function() { refreshBalance();});
+
+과 같은 Code를 사용한다.
+
+---
 
 # Problem
 
@@ -45,9 +60,12 @@ Network에서 지속적으로 mining을 시키던가,
 
 web에서 송신을 한 후 console에서 mining을 실행시켜야 한다.
 
+---
 
 # The Solidity Contract-Oriented Programming Language
 [![Join the chat at https://gitter.im/ethereum/solidity](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereum/solidity?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/ethereum/solidity.svg?branch=develop)](https://travis-ci.org/ethereum/solidity)
+
+---
 
 ## Useful links
 To get started you can find an introduction to the language in the [Solidity documentation](https://solidity.readthedocs.org). In the documentation, you can find [code examples](https://solidity.readthedocs.io/en/latest/solidity-by-example.html) as well as [a reference](https://solidity.readthedocs.io/en/latest/solidity-in-depth.html) of the syntax and details on how to write smart contracts.
@@ -58,8 +76,12 @@ The changelog for this project can be found [here](https://github.com/ethereum/s
 
 Solidity is still under development. So please do not hesitate and open an [issue in GitHub](https://github.com/ethereum/solidity/issues) if you encounter anything strange.
 
+---
+
 ## Building
 See the [Solidity documentation](https://solidity.readthedocs.io/en/latest/installing-solidity.html#building-from-source) for build instructions.
+
+---
 
 ## How to Contribute
 Please see our contribution guidelines in [the Solidity documentation](https://solidity.readthedocs.io/en/latest/contributing.html).
